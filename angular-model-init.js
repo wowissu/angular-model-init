@@ -9,7 +9,6 @@
             link: function ($scope, $element, $attrs, ngModel) {
                 ngModel.$setViewValue($parse($attrs.ngModelInit)($scope));
                 ngModel.$render();
-                $scope.$destroy();
             }
         };
     }]);
