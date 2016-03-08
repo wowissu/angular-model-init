@@ -1,10 +1,7 @@
 # angular-model-init
-let ng-model can init
+init ng-model
 
-# How to use
-
-
-## Example
+## Directive
 
 ```js
 app.directive('ngModelInit', ['$parse', function ($parse) {
@@ -20,6 +17,7 @@ app.directive('ngModelInit', ['$parse', function ($parse) {
 }]);
 ```
 
+## Example
 
 ```html
 <input ng-model="myModel" ng-model-init="'123456'" />
