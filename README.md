@@ -11,7 +11,6 @@ app.directive('ngModelInit', ['$parse', function ($parse) {
         link: function ($scope, $element, $attrs, ngModel) {
             ngModel.$setViewValue($parse($attrs.ngModelInit)($scope));
             ngModel.$render();
-            $scope.$destroy();
         }
     };
 }]);
