@@ -6,9 +6,12 @@ init ng-model
 ```js
 app.directive('ngModelInit', ['$parse', function ($parse) {
     return {
-        require: 'ngModel',
+        require: '?ngModel',
         restrict: 'A',
         link: function ($scope, $element, $attrs, ngModel) {
+            if (!ngModel) {
+                return;
+            }
             ngModel.$setViewValue($parse($attrs.ngModelInit)($scope));
             ngModel.$render();
         }
