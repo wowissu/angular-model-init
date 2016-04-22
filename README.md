@@ -1,6 +1,15 @@
 # angular-model-init
 init ng-model
 
+## Example
+
+```html
+<input ng-model="myModel" ng-model-init="'123456'" />
+<input ng-model="myModel" ng-model-init="[1, 2, 3]" />
+<input ng-model="myModel" ng-model-init="myVar" />
+```
+
+
 ## Directive
 
 ```js
@@ -18,13 +27,3 @@ app.directive('ngModelInit', ['$parse', function ($parse) {
     };
 }]);
 ```
-
-## Example
-
-```html
-<input ng-model="myModel" ng-model-init="'123456'" />
-<input ng-model="myModel" ng-model-init="[1, 2, 3]" />
-<input ng-model="myModel" ng-model-init="myVar" />
-```
-
-
