@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ngModelInit</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+    <script src="../angular-model-init.su.js"></script>
+</head>
+<body ng-app="app" ng-controller="appCtrl">
+
+    <input type="text" ng-model="myModel" ng-model-init="123" />
+    <div ng-bind="myModel"></div>
+    <script>
+        (function () {
+            "use strict";
+
+            var app = angular.module('app', ['ngModelInit']);
+
+            app.controller('appCtrl', ['$scope', function ($scope) {
+                console.info('app init');
+            }]);
+        }());
+    </script>
+</body>
+</html>
